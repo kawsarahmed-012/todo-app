@@ -23,6 +23,7 @@ function App() {
           <TodosList />
         </TodoProvider>
       </div>
+      <p className="text-center mt-16 text-light-dark-grayish-blue dark:text-dark-dark-grayish-blue">Drag and drop to reorder list</p>
     </main>
   );
 }
