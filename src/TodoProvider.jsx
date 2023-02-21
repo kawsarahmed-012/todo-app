@@ -48,7 +48,7 @@ function TodoProvider({ children } = props) {
     { id: '996e5bfc-a919-4b2c-9b4d-ecd99eb0095e', task: 'add clear completed button', status: 'completed' },
     { id: '67f9296b-a25d-4258-b42b-62b2e41bdc8a', task: 'add sorting method', status: 'completed' },
     { id: '8f5cbcf6-cfd6-44df-a000-5cae2c5f2926', task: 'add local storage support', status: 'completed' },
-    { id: '61fe5265-88a6-4331-ba29-36badcee14a6', task: 'add drag and drop feature', status: 'active' },
+    { id: '61fe5265-88a6-4331-ba29-36badcee14a6', task: 'add drag and drop feature', status: 'completed' },
   ];
 
   const [todos, todosActionDispatch] = useReducer(reducer, JSON.parse(localStorage.getItem('todos')) || defaultTodos);
