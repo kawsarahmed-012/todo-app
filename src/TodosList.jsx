@@ -46,13 +46,13 @@ function TodosList() {
             }, 0)} items left`}
           </p>
           <div className="sort-items flex gap-6 justify-center rounded-md bg-white dark:bg-dark-very-dark-desaturated-blue py-3 md:py-0 text-light-dark-grayish-blue font-bold text-sm md:text-base dark:text-dark-dark-grayish-blue">
-            <button className="hover:text-bright-blue" onClick={() => setFilter('')}>
+            <button className="hover:text-bright-blue data-[active=true]:text-bright-blue" data-active={filter === ''} onClick={() => setFilter('')}>
               All
             </button>
-            <button className="hover:text-bright-blue" onClick={() => setFilter('active')}>
+            <button className="hover:text-bright-blue data-[active=true]:text-bright-blue" data-active={filter === 'active'} onClick={() => setFilter('active')}>
               Active
             </button>
-            <button className="hover:text-bright-blue" onClick={() => setFilter('completed')}>
+            <button className="hover:text-bright-blue data-[active=true]:text-bright-blue" data-active={filter === 'completed'} onClick={() => setFilter('completed')}>
               Completed
             </button>
           </div>
