@@ -17,7 +17,9 @@ function TodosList() {
   }
 
   function dropHandler(e) {
-    const itemBoundaryPos = Math.abs(Math.ceil((e.clientY - todosRef.current.getBoundingClientRect().top - 21) / 41));
+    const { top, height } = todosRef.current.getBoundingClientRect();
+    const noOfChildren = todosRef.current.children.length;
+    const itemBoundaryPos = Math.abs(Math.ceil((e.clientY - top) / (height / noOfChildren) - 0.5));
     let endPos;
 
     if (itemBoundaryPos < startPos) endPos = itemBoundaryPos;
