@@ -10,7 +10,7 @@ function Todo({ todo: { id, task, status }, todosActionDispatch, setStartPos, in
 
   return (
     <li className="flex items-center px-4 py-3 border-b-[1px] border-light-very-light-grayish-blue dark:border-dark-very-dark-grayish-blue-2" draggable onDragStart={() => setStartPos(index)} onDragEnd={() => setStartPos(null)}>
-      <button className="check-icon relative aspect-square m-[2px] mr-2 w-5 h-5 flex justify-center items-center border-2 border-light-light-grayish-blue hover:border-bright-blue dark:border-dark-dark-grayish-blue rounded-full bg-white dark:bg-dark-very-dark-desaturated-blue data-[completed=true]:stroke-white" onClick={toggleHandler} data-completed={status === 'completed'}>
+      <button className="check-icon isolate relative aspect-square m-[2px] mr-2 w-5 h-5 flex justify-center items-center rounded-full bg-white dark:bg-dark-very-dark-desaturated-blue data-[completed=true]:stroke-white" onClick={toggleHandler} data-completed={status === 'completed'}>
         <CheckIcon />
         <span className="hidden">mark as done</span>
       </button>

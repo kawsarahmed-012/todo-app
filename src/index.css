@@ -56,7 +56,6 @@ h6 {
   isolation: isolate;
 }
 
-/* 
 .check-icon::before {
   content: '';
   position: absolute;
@@ -64,23 +63,43 @@ h6 {
   z-index: -1;
   margin: -2px;
   border-radius: inherit;
-  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-  opacity: 0;
+  background-color: hsl(236, 33%, 92%);
+  transition: 1s;
+}
+
+.dark .check-icon::before {
+  background-color: hsl(237, 14%, 26%);
+}
+
+.check-icon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-color: white;
   transition: 0.2s;
 }
 
-.check-icon:hover {
-  border-width: 0;
+.dark .check-icon::after {
+  background-color: hsl(235, 24%, 19%);
 }
 
-.check-icon:hover::before {
-  opacity: 1;
+li:hover .check-icon:not(.check-icon[data-completed='true'])::before {
+  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
-*/
+
+.check-icon[data-completed='true']::after {
+  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
 
 .check-icon[data-completed='true'] {
   background-image: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   border: none;
+}
+
+.check-icon[data-completed='true']::before {
+  background: transparent;
 }
 
 body {
